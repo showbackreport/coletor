@@ -1,0 +1,4 @@
+10 08-19 * * 1-5 /soft/Backup/coleto_bk.sh
+15 6  * * *    (DATA=`date "+\%Y-\%m-\%d \%H:\%M:\%S" ` ;echo INICIO ====== $DATA    ; /root/bin/coletor.py /var/account/pacct.1 ; DATA=`date "+\%Y-\%m-\%d \%H:\%M:\%S" ` ;echo FIM  ====== $DATA   ) >>/var/log/coletor.log
+
+

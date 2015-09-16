@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 '''
  Pegar a saida o dump-acct e preparar para carga no SBR-L 
-'''
+
+ Setembro/2015
+  - agora com suporte a XML/RPC
+ 
+ '''
 
 ### Cabecalhos ###
 import syslog
@@ -22,7 +26,8 @@ import sqlite3 as lite
 import shlex, subprocess
 import socket
 ghost=socket.gethostname()
-
+'''
+# removido mysql
 try:
   import MySQLdb
 except:
@@ -31,7 +36,7 @@ except:
    log_msg(msg,f)
    print msg 
    sys.exit()
-
+'''
 
 
 # onde esta o psacct
